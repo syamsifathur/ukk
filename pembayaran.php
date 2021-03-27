@@ -85,7 +85,7 @@ if ($id_pelanggan_login !==$id_pelanggan_beli)
 		$namabukti = $_FILES["bukti"]["name"];
 		$lokasibukti = $_FILES["bukti"]["tmp_name"];
 		$namafiks = date("YmdHis").$namabukti;
-		move_uploaded_file($lokasibukti, "bukti_pembayaran/$namabukti");
+		move_uploaded_file($lokasibukti, "bukti_pembayaran/$namafiks");
 		
 		$nama = $_POST["nama"];
 		$bank = $_POST["bank"];
