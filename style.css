@@ -1,0 +1,69 @@
+.navbar-brand {
+        font-size: 18px;
+    }
+/* Bagian Footer */
+    footer {
+        background: #333333;
+        margin-top: 60px;
+        padding: 50px 0;
+        color: #fff;
+        position: relative;
+    }
+    .kontak-footer {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #fde428;
+        color: #333;
+        padding: 10px 20px 10px;
+        position: relative;
+        text-align: center;
+        z-index: 4;
+    }
+    .kontak-footer h4 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0px;
+        padding: 0px
+    }
+    .kontak-footer h2 {
+        font-size: 36px;
+        line-height: 46px;
+        margin: 0px;
+        padding: 0px;
+        color: #333;
+    }
+    .kontak-footer p {
+        font-size: 10px;
+        margin-bottom: 0px;
+        padding: 0px;
+    }
+    .kontak-footer a {
+        text-decoration: none;
+        color: #222;
+    }
+    .isi-footer {
+        padding: 50px 0;
+        color: #fff;
+        text-align: center;
+    }
+    .isi-footer h3 {
+        color: #fff;
+        padding: 0px;
+        margin: 0 0 20px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .telepon-footer a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+/* Menu Copyright */
+    .copyright {
+        padding: 20px 20px 30px;
+        text-align: center;
+        font-size: 16px;
+        background: #3d3d3d;
+        color: #fffefe;
+    }
