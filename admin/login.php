@@ -12,6 +12,7 @@ include 'koneksi.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
 	<!-- BOOTSTRAP STYLES-->
+    <link rel="stylesheet" href="assets/css/style-login.css">
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
@@ -22,36 +23,24 @@ include 'koneksi.php';
 
 </head>
 <body>
-    <div class="container">
-        <div class="row text-center ">
-            <div class="col-md-12">
-                <br /><br />
-                <h2> Admin : Login</h2>
-               
-                <h5>( Login untuk mendapatkan akses )</h5>
-                 <br />
-            </div>
-        </div>
-         <div class="row ">
-               
-                  <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                        <strong>   Masuk </strong>  
-                            </div>
-                            <div class="panel-body">
-                                <form role="form" method="post">
-                                       <br />
-                                     <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="fa fa-tag"  ></i></span>
-                                            <input type="text" class="form-control" name="user" placeholder="username" />
+     <div class="container">
+            <div class="row ">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div class="card card-signin my-5">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Login Administrator</h5>
+                                <form class="form-signin" method="post">
+                                     <div class="form-label-group">
+                                            <input id ="inputEmail" type="text" class="form-control" name="user" placeholder="username" required/>
+                                            <label for="inputEmail">Username</label>
                                         </div>
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
-                                            <input type="password" class="form-control"  name="pass" placeholder="password" />
+                                        <div class="form-label-group">
+                                            <input id="inputPassword" type="password" class="form-control"  name="pass" placeholder="password" required />
+                                            <label for="inputPassword">Password</label>
                                         </div>
                                      
-                                     <button class="btn btn-primary" name="login">Login</button>
+                                     <button class="btn btn-lg btn-primary btn-block text-uppercase" name="login">Login</button>
+                                     <hr class="my-4">
                                     </form>
                                     <?php 
                                     if (isset($_POST['login']))
@@ -71,14 +60,11 @@ include 'koneksi.php';
                                        }
                                     }
                                     ?>
-                            </div>
-                           
-                        </div>
-                    </div>
-                
-                
-        </div>
-    </div>
+                         </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
 
      <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
