@@ -57,10 +57,12 @@ if (!isset($_SESSION['admin']))
                             <div class="sb-sidenav-menu-heading">Menu</div>
                             <a class="nav-link" href="index.php"><div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                                 Home</a>
-                            <a class="nav-link" href="index.php?halaman=produk"><div class="sb-nav-link-icon"><i class="fas fa-store"></i></div>
+                            <a class="nav-link" href="index.php?halaman=produk"><div class="sb-nav-link-icon"><i class="fas fa-cube"></i></div>
                                 Produk</a>
                             <a class="nav-link" href="index.php?halaman=pembelian"><div class="sb-nav-link-icon"><i class="fas fa-shopping-basket"></i></div>
                                 Pembelian</a>
+                            <a class="nav-link" href="index.php?halaman=pelanggan"><div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>
+                                Laporan Pembelian</a>
                             <a class="nav-link" href="index.php?halaman=pelanggan"><div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Pelanggan</a>
                         </div>

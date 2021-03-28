@@ -56,8 +56,13 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 						<td><?php echo $pecah["status_pembelian"] ?></td>
 						<td>Rp. <?php echo number_format($pecah["total"]) ?></td>
 						<td>
-							<a href="nota.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-secondary">Nota</a>
-							<a href="pembayaran.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-success">Pembayaran</a>
+							<a href="nota.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-info">Nota</a>
+
+							<?php if ($pecah['status_pembelian']=="Pending"): ?>
+							<a href="pembayaran.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-success">Input Pembayaran</a>
+							<?php else: ?>
+								<a href="lihat_pembayaran.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-warning">Lihat Pembayaran</a>
+							<?php endif ?>
 						</td>
 					</tr>
 					<?php $nomor++; ?>
