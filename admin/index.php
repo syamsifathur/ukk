@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 session_start();
 //Koneksi ke database
 include 'koneksi.php';
@@ -55,13 +55,13 @@ if (!isset($_SESSION['admin']))
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Menu</div>
-                            <a class="nav-link" href="index.php"><div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                            <a class="nav-link" href="index.php?halaman=home"><div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                                 Home</a>
                             <a class="nav-link" href="index.php?halaman=produk"><div class="sb-nav-link-icon"><i class="fas fa-cube"></i></div>
                                 Produk</a>
                             <a class="nav-link" href="index.php?halaman=pembelian"><div class="sb-nav-link-icon"><i class="fas fa-shopping-basket"></i></div>
                                 Pembelian</a>
-                            <a class="nav-link" href="index.php?halaman=pelanggan"><div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>
+                            <a class="nav-link" href="index.php?halaman=laporan_pembelian"><div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>
                                 Laporan Pembelian</a>
                             <a class="nav-link" href="index.php?halaman=pelanggan"><div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Pelanggan</a>
@@ -83,12 +83,17 @@ if (!isset($_SESSION['admin']))
                         <h1 class="mt-4">Sidenav Light</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
+                            <li class="breadcrumb-item active"><?php echo $_GET['halaman']; ?></a></li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
                                  <?php 
                                     if (isset($_GET['halaman']))
                                     {
+                                        if ($_GET['halaman']=="home")
+                                        {
+                                            include 'home.php';
+                                        }
                                         if ($_GET['halaman']=="produk")
                                         {
                                             include 'produk.php';
@@ -133,10 +138,6 @@ if (!isset($_SESSION['admin']))
                                         {
                                             include 'pembayaran.php';
                                         }
-                                    }
-                                    else 
-                                    {
-                                        include 'home.php' ;
                                     }
                                 ?>
                             </div>
