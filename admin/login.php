@@ -6,18 +6,15 @@ include 'koneksi.php';
 ?>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <link rel="icon" type="image/png" href="../img/fav-icon.png">
+    <title>Login Administrator</title>
 	<!-- BOOTSTRAP STYLES-->
     <link rel="stylesheet" href="assets/css/style-login.css">
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
-     <!-- FONTAWESOME STYLES-->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-        <!-- CUSTOM STYLES-->
-    <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
@@ -68,14 +65,7 @@ include 'koneksi.php';
 
 
      <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    <!-- JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-      <!-- BOOTSTRAP SCRIPTS -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- METISMENU SCRIPTS -->
-    <script src="assets/js/jquery.metisMenu.js"></script>
-      <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
-   
+    <script src="assets/js/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

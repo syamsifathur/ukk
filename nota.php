@@ -49,7 +49,8 @@ include 'koneksi.php';
 				<h3>Pembelian</h3>
 				<strong>No. Pembelian: <?php echo $detail['id_pembelian'] ?></strong><br>
 				Tanggal: <?php echo $detail['tanggal']; ?><br>
-				Total: Rp. <?php echo number_format($detail['total']);  ?>
+				Total: Rp. <?php echo number_format($detail['total']);  ?><br>
+				Status Pembelian : <?php echo $detail['status_pembelian']; ?>
 			</div>
 			<div class="col-md-6">
 				<h3>Pelanggan</h3>
@@ -115,9 +116,9 @@ include 'koneksi.php';
     <!-- Akhir Menu Copyright -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.4.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
+    <script src="admin/assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="admin/assets/js/popper.min.js"></script>
+    <script src="admin/assets/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>

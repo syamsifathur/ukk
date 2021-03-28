@@ -127,9 +127,9 @@ if (!isset($_SESSION["pelanggan"]))
     <!-- Akhir Menu Copyright -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.4.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="admin/assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="admin/assets/js/popper.min.js"></script>
+    <script src="admin/assets/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
