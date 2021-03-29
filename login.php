@@ -12,39 +12,39 @@ include 'koneksi.php';
 	<title>Login Pelanggan</title>
 	<link rel="stylesheet" href="admin/assets/css/bootstrap.css">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style-login.css">
 </head>
 <body>
 
 	<!-- Navbar -->
-	<!-- Navbar -->
 	<?php include "menu.php" ?>
 	
 	<div class="container">
-		<div class="row">
-			<div class="col-md-4 ">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Login Pelanggan</h3>
-					</div>
-					<div class="panel-body">
-						<form method="post">
-							<div class="form-group">
-								<label>Email</label>
-								<input type="email" class="form-control" name="email">
-							</div>
-							<div class="form-group">
-								<label>Password</label>
-								<input type="password" class="form-control" name="password">
-							</div>
-							<button class="btn btn-primary" name="login">Login</button>
-						</form>
-							<div class="daftar">
+        <div class="row ">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Login Pelanggan</h5>
+                        <form class="form-signin" method="post">
+                             <div class="form-label-group">
+                                    <input id ="inputEmail" type="text" class="form-control" name="email" placeholder="Username" required/>
+                                    <label for="inputEmail">Username</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputPassword" type="password" class="form-control"  name="password" placeholder="Password" required />
+                                    <label for="inputPassword">Password</label>
+                                </div>
+                             
+                             	<button class="btn btn-lg btn-primary btn-block text-uppercase" name="login">Login</button>
+                             	<hr class="my-4">
+                             	<div class="daftar">
 								Belum Memiliki akun? <a href="daftar.php">Daftar disini</a>
-							</div>
-					</div>
-				</div>
-			</div>
-		</div>
+							  </div>
+                        </form>
+                 	</div>
+              	</div>
+          	</div>
+         </div>
 	</div>
 <?php 
 // jika ada tombol login(tombol login ditekan)
@@ -98,9 +98,9 @@ if (isset($_POST["login"]))
     <!-- Akhir Menu Copyright -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.4.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="admin/assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="admin/assets/js/popper.min.js"></script>
+    <script src="admin/assets/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

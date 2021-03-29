@@ -4,6 +4,24 @@ $ambil = $koneksi->query("SELECT * FROM pembelian JOIN pelanggan ON pembelian.id
 $detail = $ambil->fetch_assoc();
 ?>
 
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Pembelian</h3>
+				<strong>No. Pembelian: <?php echo $detail['id_pembelian'] ?></strong><br>
+				Tanggal: <?php echo $detail['tanggal']; ?><br>
+				Total: Rp. <?php echo number_format($detail['total']);  ?><br>
+				Status Pembelian : <?php echo $detail['status_pembelian']; ?>
+			</div>
+			<div class="col-md-6">
+				<h3>Pelanggan</h3>
+				<strong><?php echo $detail['nama_lengkap']; ?></strong><br>
+				<p>
+					Email :<?php echo $detail['email']; ?><br>
+					No.Hp :<?php echo $detail['no_hp']; ?>
+				</p>
+			</div>
+		</div>
+
 <table class="table table-bordered">
 	<thead>
 		<tr>
@@ -21,10 +39,10 @@ $detail = $ambil->fetch_assoc();
 		<tr>
 			<td><?php echo $nomor; ?></td>
 			<td><?php echo $pecah['nama_produk']; ?></td>
-			<td><?php echo $pecah['harga']; ?></td>
+			<td>Rp. <?php echo number_format($pecah['harga']); ?></td>
 			<td><?php echo $pecah['jumlah']; ?></td>
 			<td>
-				<?php echo $pecah['harga']*$pecah['jumlah'] ?>
+				Rp. <?php echo number_format($pecah['harga']*$pecah['jumlah']); ?>
 			</td>
 		</tr>
 		<?php $nomor++; ?>
