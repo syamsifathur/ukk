@@ -1,7 +1,7 @@
 <?php 
 session_start();
 //Koneksi ke database
-include 'koneksi.php';
+include '../koneksi.php';
 
 
 if (!isset($_SESSION['admin'])) 
@@ -57,7 +57,9 @@ if (!isset($_SESSION['admin']))
                             <div class="sb-sidenav-menu-heading">Menu</div>
                             <a class="nav-link" href="index.php?halaman=home"><div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                                 Home</a>
-                            <a class="nav-link" href="index.php?halaman=produk"><div class="sb-nav-link-icon"><i class="fas fa-cube"></i></div>
+                            <a class="nav-link" href="index.php?halaman=kategori"><div class="sb-nav-link-icon"><i class="fas fa-cube"></i></div>
+                                Kategori</a>
+                            <a class="nav-link" href="index.php?halaman=produk"><div class="sb-nav-link-icon"><i class="fas fa-tags"></i></div>
                                 Produk</a>
                             <a class="nav-link" href="index.php?halaman=pembelian"><div class="sb-nav-link-icon"><i class="fas fa-shopping-basket"></i></div>
                                 Pembelian</a>
@@ -137,6 +139,14 @@ if (!isset($_SESSION['admin']))
                                         elseif ($_GET['halaman']=="pembayaran") 
                                         {
                                             include 'pembayaran.php';
+                                        }
+                                        elseif ($_GET['halaman']=="laporan_pembelian") 
+                                        {
+                                            include 'laporan_pembelian.php';
+                                        }
+                                        elseif ($_GET['halaman']=="kategori") 
+                                        {
+                                            include 'kategori.php';
                                         }
                                     }
                                 ?>

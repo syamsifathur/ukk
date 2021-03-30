@@ -6,7 +6,7 @@
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
 		  <div class="collapse navbar-collapse" id="navbarNav">
-		    <ul class="navbar-nav ml-auto">
+		    <ul class="navbar-nav mr-auto">
 		      	<li class="nav-item active">
 		        	<a class="nav-link" href="index.php">Beranda</a>
 		      	</li>
@@ -34,6 +34,11 @@
 					<a class="nav-link" href="checkout.php">Checkout</a>
 				</li>
 		    </ul>
+
+		    <form action="pencarian.php" method="get" class="form-inline my-2 my-lg-0">
+		      <input class="form-control mr-sm-2" type="search" placeholder="Cari" name="keyword">
+		      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
+		    </form>
 		  </div>
 	  </div>
 	</nav>

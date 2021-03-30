@@ -1,7 +1,7 @@
 ﻿<?php 
 session_start();
 //Koneksi ke database
-include 'koneksi.php';
+include '../koneksi.php';
 
 ?>
 
