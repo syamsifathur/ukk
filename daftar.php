@@ -32,11 +32,11 @@ include 'koneksi.php';
 								<label for="inputPw">Password</label>
 							</div>
 							<div class="form-label-group">
-								<input id ="inputNama" type="email" class="form-control" name="nama" placeholder="Nama Lengkap" required>
+								<input id ="inputNama" type="text" class="form-control" name="nama" placeholder="Nama Lengkap" required>
 								<label for="inputNama">Nama Lengkap</label>
 							</div>
 							<div class="form-label-group">
-								<input id ="inputNo" type="email" class="form-control" name="nohp" placeholder="No.Hp" required>
+								<input id ="inputNo" type="number" class="form-control" name="nohp" placeholder="No.Hp" required>
 								<label for="inputNo">No.hp</label>
 							</div>
 							<button class="btn btn-lg btn-primary btn-block text-uppercase" name="daftar">Daftar</button>
@@ -53,7 +53,7 @@ include 'koneksi.php';
 if (isset($_POST["daftar"]))
 {
 	$email = $_POST["email"];
-	$password = $_POST["password"];
+	$password = md5($_POST["password"]);
 	$nama = $_POST["nama"];
 	$nohp = $_POST["nohp"];
 

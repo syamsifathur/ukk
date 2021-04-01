@@ -9,7 +9,7 @@ include 'koneksi.php';
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="img/fav-icon.png">
-	<title>Toko Syamsi</title>
+	<title>Thuur Store</title>
 	<link rel="stylesheet" href="admin/assets/css/bootstrap.css">
 	<link rel="stylesheet" href="style.css">
 </head>

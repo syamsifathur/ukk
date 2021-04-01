@@ -27,8 +27,8 @@ if (!isset($_SESSION['admin']))
         <script src="assets/js/all.min.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.php?halaman=home">Administrator</a>
+        <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
+            <a class="navbar-brand" href="index.php?halaman=home"><img src="../img/logo.png" alt="logo" width="115"></a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
             <!-- Navbar-->
             <ul class="navbar-nav ml-auto">
@@ -71,7 +71,7 @@ if (!isset($_SESSION['admin']))
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h1 class="mt-4">Sidenav Light</h1>
+                        <h1 class="mt-4">Thuur Store</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.php?halaman=home">Dashboard</a></li>
                             <li class="breadcrumb-item active"><?php echo $_GET['halaman']; ?></a></li>
