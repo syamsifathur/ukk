@@ -93,3 +93,7 @@
   font-size: 12px;
   color: #777;
 }
+a {
+  text-decoration: none;
+  color: #fff;
+}

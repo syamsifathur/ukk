@@ -15,9 +15,6 @@ include 'koneksi.php';
 	<link rel="stylesheet" href="style-login.css">
 </head>
 <body>
-
-	<!-- Navbar -->
-	<?php include "menu.php" ?>
 	
 	<div class="container">
         <div class="row ">
@@ -27,8 +24,8 @@ include 'koneksi.php';
                         <h5 class="card-title text-center">Login Pelanggan</h5>
                         <form class="form-signin" method="post">
                              <div class="form-label-group">
-                                    <input id ="inputEmail" type="text" class="form-control" name="email" placeholder="Username" required/>
-                                    <label for="inputEmail">Username</label>
+                                    <input id ="inputEmail" type="text" class="form-control" name="email" placeholder="Email" required/>
+                                    <label for="inputEmail">Email</label>
                                 </div>
                                 <div class="form-label-group">
                                     <input id="inputPassword" type="password" class="form-control"  name="password" placeholder="Password" required />
@@ -38,7 +35,8 @@ include 'koneksi.php';
                              	<button class="btn btn-lg btn-primary btn-block text-uppercase" name="login">Login</button>
                              	<hr class="my-4">
                              	<div class="daftar">
-								Belum Memiliki akun? <a href="daftar.php">Daftar disini</a>
+								Belum Memiliki akun? <a href="daftar.php">Daftar disini</a> <br>
+								Login sebagai administrator? klik <a href="admin/login.php">Disini</a>
 							  </div>
                         </form>
                  	</div>

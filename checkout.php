@@ -70,12 +70,12 @@ if (!isset($_SESSION["pelanggan"]))
 
 			<form method="post">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-6">
 						<div class="form-group">
 							<input type="text" readonly value="<?php echo($_SESSION["pelanggan"]['nama_lengkap']) ?>" class="form-control">
 						</div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-6">
 						<div class="form-group">
 							<input type="text" readonly value="<?php echo($_SESSION["pelanggan"]['no_hp']) ?>" class="form-control">
 						</div>

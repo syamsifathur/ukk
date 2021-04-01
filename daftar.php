@@ -12,45 +12,41 @@ include 'koneksi.php';
 	<title>Daftar Pelanggan</title>
 	<link rel="stylesheet" href="admin/assets/css/bootstrap.css">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style-login.css">
 </head>
 <body>
 
-	<!-- Navbar -->
-	<!-- Navbar -->
-	<?php include "menu.php" ?>
-
 	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Daftar Pelanggan</h3>
-					</div>
-					<div class="panel-body">
-						<form method="post">
-							<div class="form-group">
-								<label>Email</label>
-								<input type="email" class="form-control" name="email">
+        <div class="row ">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Daftar Pelanggan</h5>
+                        <form class="form-signin" method="post">
+							<div class="form-label-group">
+								<input id ="inputEmail" type="email" class="form-control" name="email" placeholder="Email" required>
+								<label for="inputEmail">Email</label>
 							</div>
-							<div class="form-group">
-								<label>Password</label>
-								<input type="password" class="form-control" name="password">
+							<div class="form-label-group">
+								<input id ="inputPw" type="password" class="form-control" name="password" placeholder="Password" required>
+								<label for="inputPw">Password</label>
 							</div>
-							<div class="form-group">
-								<label>Nama Lengkap</label>
-								<input type="text" class="form-control" name="nama">
+							<div class="form-label-group">
+								<input id ="inputNama" type="email" class="form-control" name="nama" placeholder="Nama Lengkap" required>
+								<label for="inputNama">Nama Lengkap</label>
 							</div>
-							<div class="form-group">
-								<label>No.hp</label>
-								<input type="number" class="form-control" name="nohp">
+							<div class="form-label-group">
+								<input id ="inputNo" type="email" class="form-control" name="nohp" placeholder="No.Hp" required>
+								<label for="inputNo">No.hp</label>
 							</div>
-							<button class="btn btn-primary" name="daftar">Daftar</button>
+							<button class="btn btn-lg btn-primary btn-block text-uppercase" name="daftar">Daftar</button>
+							<hr class="my-4">
+							Sudah Memiliki akun? Silahkan <a href="login.php">Login</a>
 						</form>
-						Sudah Memiliki akun? Silahkan <a href="login.php">Login</a>
-					</div>
-				</div>
-			</div>
-		</div>
+                 	</div>
+              	</div>
+          	</div>
+         </div>
 	</div>
 <?php 
 // jika ada tombol daftar(tombol daftar ditekan)

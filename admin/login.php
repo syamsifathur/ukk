@@ -38,6 +38,8 @@ include 'koneksi.php';
                                      
                                      <button class="btn btn-lg btn-primary btn-block text-uppercase" name="login">Login</button>
                                      <hr class="my-4">
+                                     Login sebagai pelanggan? klik <a href="../login.php">Disini</a>
+                                     <hr class="my-4">
                                     </form>
                                     <?php 
                                     if (isset($_POST['login']))
@@ -48,7 +50,7 @@ include 'koneksi.php';
                                        {
                                         $_SESSION['admin']=$ambil->fetch_assoc();
                                         echo "<div class='alert alert-info'>Login Sukses</div>";
-                                        echo "<meta http-equiv='refresh' content='1;url=index.php'>";
+                                        echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=home'>";
                                        }
                                        else 
                                        {
