@@ -129,6 +129,10 @@ if (!isset($_SESSION['admin']))
                                         {
                                             include 'pembayaran.php';
                                         }
+                                        elseif ($_GET['halaman']=="laporan_pembelian") 
+                                        {
+                                            include 'laporan_pembelian.php';
+                                        }
                                     }
                                 ?>
                             </div>
