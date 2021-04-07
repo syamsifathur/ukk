@@ -1,17 +1,17 @@
-<h2>Tambah Pelanggan</h2>
+<h2>Daftar Pelanggan</h2>
 
 <form method="post" enctype="multipart/form-data">
 	<div class="form-group">
 		<label>Nama</label>
-		<input type="text" class="form-control" name="nama">
+		<input type="text" class="form-control" name="nama" required>
 	</div>
 	<div class="form-group">
 		<label>Email</label>
-		<input type="text" class="form-control" name="email">
+		<input type="text" class="form-control" name="email" required>
 	</div>
 	<div class="form-group">
 		<label>No.hp</label>
-		<input type="number" class="form-control" name="nohp">
+		<input type="number" class="form-control" name="nohp" required>
 	<button class="btn btn-primary" name="save">Simpan</button>
 </form>
 <?php 

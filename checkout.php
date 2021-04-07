@@ -9,6 +9,11 @@ if (!isset($_SESSION["pelanggan"]))
  	echo "<script>alert('Silahkan login terlebih dahulu');</script>";
  	echo "<script>location='login.php'</script>";
 } 
+elseif (!isset($_SESSION["keranjang"])) 
+{
+ 	echo "<script>alert('Keranjang anda masih kosong, silahkan belanja terlebih dahulu');</script>";
+ 	echo "<script>location='index.php'</script>";
+} 
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -3,18 +3,18 @@
 <form method="post" enctype="multipart/form-data">
 	<div class="form-group">
 		<label>Nama Produk</label>
-		<input type="text" class="form-control" name="nama">
+		<input type="text" class="form-control" name="nama" required>
 	</div>
 	<div class="form-group">
 		<label>Stock</label>
-		<input type="number" class="form-control" name="stock">
+		<input type="number" class="form-control" name="stock" required>
 	</div><div class="form-group">
 		<label>Harga (Rp)</label>
-		<input type="number" class="form-control" name="harga">
+		<input type="number" class="form-control" name="harga" required>
 	</div>
 	<div class="form-group">
 		<label>Foto</label>
-		<input type="file" class="form-control" name="foto">
+		<input type="file" class="form-control" name="foto" required>
 	</div>
 	<button class="btn btn-primary" name="save">Simpan</button>
 </form>

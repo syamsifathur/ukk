@@ -46,7 +46,10 @@ if ($id_pelanggan_login !==$id_pelanggan_beli)
 	<!-- Navbar -->
 	<?php include "menu.php" ?>
 
-
+	<?php 
+	$ambil = $koneksi->query("SELECT * FROM pelanggan WHERE id_pelanggan='$id_pelanggan_login'");
+	$pecah = $ambil->fetch_assoc();
+	 ?>
 	<section class="konten">
 		<div class="container">
 			<h2>Konfirmasi Pembayaran</h2>
@@ -57,20 +60,20 @@ if ($id_pelanggan_login !==$id_pelanggan_beli)
 			<form method="post" enctype="multipart/form-data">
 				<div class="form-group">
 					<label>Nama Penyetor</label>
-					<input type="text" class="form-control" name="nama">
+					<input type="text" class="form-control" name="nama" value="<?php echo $pecah['nama_lengkap']; ?>" required>
 				</div>
 				<div class="form-group">
 					<label>Bank</label>
-					<input type="text" class="form-control" name="bank">
+					<input type="text" class="form-control" name="bank" required>
 				</div>
 				<div class="form-group">
 					<label>Jumlah</label>
-					<input type="number" class="form-control" name="jumlah" min="1">
+					<input type="number" class="form-control" name="jumlah" min="1" required>
 				</div>
 				<div class="form-group">
 					<label>Foto Bukti</label>
-					<input type="file" class="form-control" name="bukti">
-					<p class="text-danger">Foto bukti harus JPG maksimal 2MB</p>
+					<input type="file" class="form-control" name="bukti" required>
+					<p class="text-danger">Size foto maksimal 2MB</p>
 				</div>
 				<button class="btn btn-primary" name="kirim">Kirim</button>
 			</form>

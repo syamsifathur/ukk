@@ -42,14 +42,14 @@ $detail = $ambil->fetch_assoc();
 					<form method="post">
 						<div class="form-group">
 							<div class="input-group">
-								<input type="number" min="1" class="form-control" name="jumlah" max="<?php echo $detail['stock']; ?>" placeholder="Masukkan jumlah item yg mau dibeli">
+								<input type="number" min="1" class="form-control" name="jumlah" max="<?php echo $detail['stock']; ?>" placeholder="Masukkan jumlah item yg mau dibeli" required>
 								<div class="input-group-btn">
 									<button class="btn btn-primary" name="beli">Beli</button>
 								</div>
 							</div>
 						</div>
 					</form>
-
+					<p>Deskripsi Singkat : <br><?php echo $detail['deskripsi_produk']; ?> </p>
 					<?php 
 					// jika ada tombol beli
 					if (isset($_POST["beli"])) 

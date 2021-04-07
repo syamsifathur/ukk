@@ -19,7 +19,7 @@ $pecah=$ambil->fetch_assoc();
 		<input type="number" name="harga" class="form-control" value="<?php echo $pecah['harga']; ?>">
 	</div>
 	<div class="form-group">
-		<img src="../img/<?php echo $pecah['foto']?>" width="200" >
+		<img src="../img/<?php echo $pecah['foto_produk']?>" width="200" >
 	</div>
 	<div class="form-group">
 		<label>Ganti Foto</label>
