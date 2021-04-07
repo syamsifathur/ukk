@@ -27,8 +27,8 @@ if (!isset($_SESSION['admin']))
         <script src="assets/js/all.min.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
-            <a class="navbar-brand" href="index.php?halaman=home"><img src="../img/logo.png" alt="logo" width="115"></a>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.php?halaman=home"><h5><b><strong>Admin</strong></b></h5></a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
             <!-- Navbar-->
             <ul class="navbar-nav ml-auto">
@@ -62,7 +62,7 @@ if (!isset($_SESSION['admin']))
                         <div class="small">Logged in as:</div>
                         <?php $ambil=$koneksi->query("SELECT * FROM admin"); ?>
                         <?php while ($pecah = $ambil->fetch_assoc()){ ?>
-                        <strong><?php echo $pecah['username']; ?></strong>
+                        <strong><?php echo $pecah['nama_lengkap']; ?></strong>
                         <?php } ?>
 
                     </div>

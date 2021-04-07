@@ -11,21 +11,9 @@ include 'koneksi.php';
 	<link rel="icon" type="image/png" href="img/fav-icon.png">
 	<link rel="stylesheet" href="admin/assets/css/bootstrap.css">
 	<link rel="stylesheet" href="style.css">
-	<script src="admin/assets/js/all.min.js" crossorigin="anonymous"></script>
-	<title>Nota Pembelian</title>
+	<title>Cetak Bukti Pembayaran</title>
 </head>
 <body>
-
-	<!-- Navbar -->
-	<?php include "menu.php" ?>
-
-	<?php 
-	$ambil = $koneksi->query("SELECT * FROM pembelian JOIN pelanggan ON pembelian.id_pelanggan=pelanggan.id_pelanggan WHERE pembelian.id_pembelian='$_GET[id]'");
-	$detail = $ambil->fetch_assoc();
-	?>
-	<div class="container">
-		<a href="print.php?id=<?php echo $detail['id_pembelian'] ?>" target="_BLANK" style="text-decoration: none; color: #000;"><i class="fas fa-print"></i> Print disini</a>
-	</div>
 
 	<section class="konten mt-4">
 		<div class="container">
@@ -34,6 +22,7 @@ include 'koneksi.php';
 		$ambil = $koneksi->query("SELECT * FROM pembelian JOIN pelanggan ON pembelian.id_pelanggan=pelanggan.id_pelanggan WHERE pembelian.id_pembelian='$_GET[id]'");
 		$detail = $ambil->fetch_assoc();
 		?>
+
 
 		<div class="row">
 			<div class="col-md-6">
@@ -98,20 +87,8 @@ include 'koneksi.php';
 		</div>
 	</section>
 
-	<!-- Bagian Footer -->
-    <?php include "footer.php" ?>
-    <!-- Akhir Footer -->
-
-    <!-- Menu Copyright -->
-    <div class="copyright">
-        Copyright © 2021 Syamsi Fathur Rachmad
-    </div>
-    <!-- Akhir Menu Copyright -->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="admin/assets/js/jquery-3.5.1.slim.min.js"></script>
-    <script src="admin/assets/js/popper.min.js"></script>
-    <script src="admin/assets/js/bootstrap.bundle.min.js"></script>
-    
+    <script>
+    	window.print();
+    </script>
 </body>
 </html>

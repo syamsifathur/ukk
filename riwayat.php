@@ -60,6 +60,8 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 
 							<?php if ($pecah['status_pembelian']=="Pending"): ?>
 							<a href="pembayaran.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-success">Input Pembayaran</a>
+							<?php elseif ($pecah['status_pembelian']=="Sudah Dikirim"): ?>
+							<a href="penerimaan-produk.php?id=<?php echo $pecah['id_pembelian']; ?>" class="btn-primary btn">Konfirmasi Pesanan</a>
 							<?php else: ?>
 								<a href="lihat_pembayaran.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-warning">Lihat Pembayaran</a>
 							<?php endif ?>
@@ -72,17 +74,6 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 		</div>
 	</section>
 	<!-- Akhir Konten -->
-
-
-
-
-
-
-
-
-
-
-
 
 	<!-- Bagian Footer -->
     <?php include "footer.php" ?>

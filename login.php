@@ -10,9 +10,9 @@ include 'koneksi.php';
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="img/fav-icon.png">
 	<title>Login Pelanggan</title>
-	<link rel="stylesheet" href="admin/assets/css/bootstrap.css">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="style-login.css">
+	<link rel="stylesheet" href="admin/assets/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="style-login.css" type="text/css">
 </head>
 <body>
 	
@@ -35,8 +35,8 @@ include 'koneksi.php';
                              	<button class="btn btn-lg btn-primary btn-block text-uppercase" name="login">Login</button>
                              	<hr class="my-4">
                              	<div class="daftar">
-								Belum Memiliki akun? <a href="daftar.php">Daftar disini</a> <br>
-								Login sebagai administrator? klik <a href="admin/login.php">Disini</a>
+								Belum Memiliki akun? <a href="daftar.php" style="text-decoration: none; color: #000000;">Daftar disini</a> <br>
+								Login sebagai administrator? klik <a href="admin/login.php" style="text-decoration: none; color: #000000;">Disini</a>
 							  </div>
                         </form>
                  	</div>

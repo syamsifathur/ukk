@@ -25,7 +25,7 @@
 				<a href="index.php?halaman=detail&id=<?php echo $pecah['id_pembelian']; ?>" class="btn-info btn">Detail</a>
 
 				<?php if ($pecah['status_pembelian']=="Sudah kirim pembayaran"): ?>
-				<a href="index.php?halaman=pembayaran&id=<?php echo $pecah['id_pembelian']; ?>" class="btn-success btn">Pembayaran</a>
+				<a href="index.php?halaman=pembayaran&id=<?php echo $pecah['id_pembelian']; ?>" class="btn-success btn">Validasi</a>
 				<?php endif ?>
 			</td>
 		</tr>

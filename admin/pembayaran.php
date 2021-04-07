@@ -41,7 +41,7 @@ $detail = $ambil->fetch_assoc();
 		<label>Status</label>
 		<select name="status" class="form-control">
 			<option value="">Pilih Status</option>
-			<option value="Lunas">Lunas</option>
+			<option value="Bukti Pembayaran Tidak valid">Bukti Pembayaran Tidak Valid</option>
 			<option value="Sudah Dikirim">Sudah Dikirim</option>
 			<option value="Batal">Batal</option>
 		</select>

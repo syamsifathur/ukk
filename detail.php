@@ -65,7 +65,6 @@ $detail = $ambil->fetch_assoc();
 					}
 					?>
 
-					<p>Untuk deskripsi selengkapnya cek <a href="deskripsi.php">disini</p>
 
 				</div>
 			</div>

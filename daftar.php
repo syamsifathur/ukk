@@ -41,7 +41,7 @@ include 'koneksi.php';
 							</div>
 							<button class="btn btn-lg btn-primary btn-block text-uppercase" name="daftar">Daftar</button>
 							<hr class="my-4">
-							Sudah Memiliki akun? Silahkan <a href="login.php">Login</a>
+							Sudah Memiliki akun? Silahkan <a href="login.php" style="text-decoration: none; color: black;">Login</a>
 						</form>
                  	</div>
               	</div>
@@ -53,7 +53,7 @@ include 'koneksi.php';
 if (isset($_POST["daftar"]))
 {
 	$email = $_POST["email"];
-	$password = md5($_POST["password"]);
+	$password = $_POST["password"];
 	$nama = $_POST["nama"];
 	$nohp = $_POST["nohp"];
 
