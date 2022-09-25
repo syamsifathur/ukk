@@ -63,7 +63,7 @@ if (isset($_POST["login"]))
 		$akun = $ambil->fetch_assoc();
 		//simpan di session pelanggan
 		$_SESSION["pelanggan"] = $akun;
-		echo "<script>alert('anda sukses login');</script>";
+		echo "<script>alert('Anda Berhasil Login');</script>";
 
 		//jika sudah belanja langsung checkout
 		if (isset($_SESSION["keranjang"]) OR !empty($_SESSION["keranjang"])) 
@@ -79,7 +79,7 @@ if (isset($_POST["login"]))
 	else
 	{
 		//anda gagal login
-		echo "<script>alert('anda gagal login, periksa akun anda');</script>";
+		echo "<script>alert('Anda gagal login, mohon periksa email/password anda');</script>";
 		echo "<script>location='login.php';</script>";
 	}
 }
@@ -91,7 +91,7 @@ if (isset($_POST["login"]))
 
     <!-- Menu Copyright -->
     <div class="copyright">
-        Copyright © 2021 Syamsi Fathur Rachmad
+        Copyright © 2022 Syamsi Fathur Rachmad
     </div>
     <!-- Akhir Menu Copyright -->
     <!-- Optional JavaScript -->

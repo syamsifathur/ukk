@@ -23,7 +23,7 @@ include 'koneksi.php';
 	$ambil = $koneksi->query("SELECT * FROM pembelian JOIN pelanggan ON pembelian.id_pelanggan=pelanggan.id_pelanggan WHERE pembelian.id_pembelian='$_GET[id]'");
 	$detail = $ambil->fetch_assoc();
 	?>
-	<div class="container">
+	<div class="container mt-4">
 		<a href="print.php?id=<?php echo $detail['id_pembelian'] ?>" target="_BLANK" style="text-decoration: none; color: #000;"><i class="fas fa-print"></i> Print disini</a>
 	</div>
 
@@ -88,7 +88,6 @@ include 'koneksi.php';
 					<strong>Bank BCA 4323189019 AN SYAMSI FATHUR RACHMAD</strong><br>
 					<strong>Dana 0812345123941 AN SYAMSI FATHUR RACHMAD</strong><br>
 					<strong>Ovo 0812345123941 AN SYAMSI FATHUR RACHMAD</strong><br>
-					Akun Dikirim via Email & Nohp anda<br>
 					Terimakasih Telah Membeli Produk Kami.
 				</p>
 			</div>

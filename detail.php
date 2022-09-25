@@ -28,7 +28,7 @@ $detail = $ambil->fetch_assoc();
 	<!-- Navbar -->
 	<?php include "menu.php" ?>
 	
-	<section class="konten">
+	<section class="konten mt-4">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">

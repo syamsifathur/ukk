@@ -36,7 +36,15 @@ $detail = $ambil->fetch_assoc();
 	</div>
 </div>
 
-<form method="post">
+<form method="post" class="mt-4">
+	<div class="form-group">
+		<label>Username Akun</label>
+		<input type="email" class="form-control" name="usernameakun" required>
+	</div>
+	<div class="form-group">
+		<label>Password Akun</label>
+		<input type="text" class="form-control" name="passwordakun" required>
+	</div>
 	<div class="form-group">
 		<label>Status</label>
 		<select name="status" class="form-control">
@@ -52,8 +60,10 @@ $detail = $ambil->fetch_assoc();
 <?php 
 if (isset($_POST["proses"])) 
 {
+	$akn = $_POST["usernameakun"];
+	$pw = $_POST["passwordakun"];
 	$status = $_POST["status"];
-	$koneksi->query("UPDATE pembelian SET status_pembelian='$status' WHERE id_pembelian='$id_pembelian'");
+	$koneksi->query("UPDATE pembelian SET status_pembelian='$status',username_akun='$akn',password_akun='$pw' WHERE id_pembelian='$id_pembelian'");
 
 	echo "<script>alert('Data Pembelian Terupdate');</script>";
     echo "<script>location='index.php?halaman=pembelian';</script>";

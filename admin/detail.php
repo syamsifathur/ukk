@@ -10,7 +10,9 @@ $detail = $ambil->fetch_assoc();
 				<strong>No. Pembelian: <?php echo $detail['id_pembelian'] ?></strong><br>
 				Tanggal: <?php echo $detail['tanggal']; ?><br>
 				Total: Rp. <?php echo number_format($detail['total']);  ?><br>
-				Status Pembelian : <?php echo $detail['status_pembelian']; ?>
+				Status Pembelian : <?php echo $detail['status_pembelian']; ?><br>
+				Username Akun : <?php echo $detail['username_akun']; ?> <br>
+				Password Akun : <?php echo $detail['password_akun']; ?> <br>
 			</div>
 			<div class="col-md-6">
 				<h3>Pelanggan</h3>

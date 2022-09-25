@@ -40,7 +40,7 @@ if ($_SESSION["pelanggan"]['id_pelanggan']!==$detbay["id_pelanggan"])
 	<!-- Navbar -->
 	<?php include "menu.php" ?>
 
-	<div class="container">
+	<div class="container mt-4">
 		<h3>Lihat Pembayaran</h3>
 		<div class="row">
 			<div class="col-md-6">
@@ -60,6 +60,14 @@ if ($_SESSION["pelanggan"]['id_pelanggan']!==$detbay["id_pelanggan"])
 					<tr>
 						<th>Jumlah</th>
 						<td>Rp. <?php echo number_format($detbay["jumlah"]) ?> </td>
+					</tr>
+					<tr>
+					<th>Username Akun : </th>
+					<th><?php echo $detbay['username_akun'] ?></th>
+					</tr>
+					<tr>
+						<th>Password Akun : </th>
+						<th><?php echo $detbay['password_akun'] ?></th>
 					</tr>
 				</table>
 			</div>

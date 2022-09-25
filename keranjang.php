@@ -32,7 +32,7 @@ if (empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"]))
 	<!-- Navbar -->
 	<?php include "menu.php" ?>
 	
-<section class="konten">
+<section class="konten mt-4">
 	<div class="container">
 		<h1>Keranjang Belanja</h1>
 		<hr>

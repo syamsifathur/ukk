@@ -36,7 +36,7 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 	$id_pembelian = $_GET['id'];
 
 	//mengambil data pembayaran berdasarkan id_pembelian
-	$ambil = $koneksi->query("SELECT*FROM pembayaran WHERE id_pembelian='$id_pembelian'");
+	$ambil = $koneksi->query("SELECT * FROM pembayaran JOIN pembelian ON pembayaran.id_pembelian=pembelian.id_pembelian WHERE pembelian. id_pembelian='$id_pembelian'");
 	$detail = $ambil->fetch_assoc();
 
 	?>
@@ -60,6 +60,14 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 					<th>Tanggal</th>
 					<th><?php echo $detail['tanggal'] ?></th>
 				</tr>
+				<tr>
+					<th>Username Akun : </th>
+					<th><?php echo $detail['username_akun'] ?></th>
+				</tr>
+				<tr>
+					<th>Password Akun : </th>
+					<th><?php echo $detail['password_akun'] ?></th>
+				</tr>
 			</table>
 		</div>
 		<div class="col-md-6">
@@ -71,7 +79,7 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 		<div class="form-group">
 			<label>Status</label>
 			<select name="status" class="form-control">
-				<option value="">Pilih Status</option>
+				<option value="">Pilih untuk konfirmasi</option>
 				<option value="Barang Telah Diterima">Barang Telah Diterima</option>
 			</select>
 		</div>
@@ -85,7 +93,7 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 		$koneksi->query("UPDATE pembelian SET status_pembelian='$status' WHERE id_pembelian='$id_pembelian'");
 
 		echo "<script>alert('Data Pembelian Terupdate');</script>";
-	    echo "<script>location='index.php?halaman=pembelian';</script>";
+	    echo "<script>location='riwayat.php';</script>";
 	}
 	?>
 	</div>

@@ -9,7 +9,7 @@ include 'koneksi.php';
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="img/fav-icon.png">
-	<title>Eshiro Store</title>
+	<title>Thuur Store</title>
 	<link rel="stylesheet" href="admin/assets/css/bootstrap.css">
 	<link rel="stylesheet" href="style.css">
 </head>
@@ -106,68 +106,6 @@ include 'koneksi.php';
 							<h5>Rp. <?php echo number_format($perproduk4['harga']); ?></h5>
 							<a href="beli.php?id=<?php echo $perproduk4['id_produk']; ?>" class="btn btn-primary">Beli</a>
 							<a href="detail.php?id=<?php echo $perproduk4['id_produk'];?>" class="btn btn-secondary">Detail</a>
-						</div>
-					</div>
-				</div>
-
-
-				<?php } ?>
-
-			</div>
-			<div class="row mt-4">
-				
-				<?php $ambil5 = $koneksi->query("SELECT * FROM produk WHERE id_produk='5'");
-					  $ambil6 = $koneksi->query("SELECT * FROM produk WHERE id_produk='6'");
-					  $ambil7 = $koneksi->query("SELECT * FROM produk WHERE id_produk='7'");
-					  $ambil8 = $koneksi->query("SELECT * FROM produk WHERE id_produk='8'");
-					  $perproduk6= $ambil6->fetch_assoc();
-					  $perproduk7= $ambil7->fetch_assoc();
-					  $perproduk8= $ambil8->fetch_assoc();?>
-				<?php while ($perproduk5= $ambil5->fetch_assoc()) { ?>
-				
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="img/<?php echo $perproduk5['foto_produk']; ?>" class="img-thumbnail" alt="" width="200">
-						<div class="caption">
-							<h3><?php echo $perproduk5['nama_produk'] ?></h3>
-							<h5>Rp. <?php echo number_format($perproduk5['harga']); ?></h5>
-							<a href="beli.php?id=<?php echo $perproduk5['id_produk']; ?>" class="btn btn-primary">Beli</a>
-							<a href="detail.php?id=<?php echo $perproduk5['id_produk'];?>" class="btn btn-secondary">Detail</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="img/<?php echo $perproduk6['foto_produk']; ?>" class="img-thumbnail" alt="" width="200">
-						<div class="caption">
-							<h3><?php echo $perproduk6['nama_produk'] ?></h3>
-							<h5>Rp. <?php echo number_format($perproduk6['harga']); ?></h5>
-							<a href="beli.php?id=<?php echo $perproduk6['id_produk']; ?>" class="btn btn-primary">Beli</a>
-							<a href="detail.php?id=<?php echo $perproduk6['id_produk'];?>" class="btn btn-secondary">Detail</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="img/<?php echo $perproduk7['foto_produk']; ?>" class="img-thumbnail" alt="" width="200">
-						<div class="caption">
-							<h3><?php echo $perproduk7['nama_produk'] ?></h3>
-							<h5>Rp. <?php echo number_format($perproduk7['harga']); ?></h5>
-							<a href="beli.php?id=<?php echo $perproduk7['id_produk']; ?>" class="btn btn-primary">Beli</a>
-							<a href="detail.php?id=<?php echo $perproduk7['id_produk'];?>" class="btn btn-secondary">Detail</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="img/<?php echo $perproduk8['foto_produk']; ?>" class="img-thumbnail" alt="" width="200">
-						<div class="caption">
-							<h3><?php echo $perproduk8['nama_produk'] ?></h3>
-							<h5>Rp. <?php echo number_format($perproduk8['harga']); ?></h5>
-							<a href="beli.php?id=<?php echo $perproduk8['id_produk']; ?>" class="btn btn-primary">Beli</a>
-							<a href="detail.php?id=<?php echo $perproduk8['id_produk'];?>" class="btn btn-secondary">Detail</a>
 						</div>
 					</div>
 				</div>

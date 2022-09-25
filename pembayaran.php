@@ -51,7 +51,7 @@ if ($id_pelanggan_login !==$id_pelanggan_beli)
 	$pecah = $ambil->fetch_assoc();
 	 ?>
 	<section class="konten">
-		<div class="container">
+		<div class="container mt-4">
 			<h2>Konfirmasi Pembayaran</h2>
 			<p>Kirim bukti pembayaran anda disini</p>
 			<div class="alert alert-info">total tagihan Anda <strong>Rp. <?php echo number_format($detpem["total"]); ?> </strong></div>
@@ -68,7 +68,7 @@ if ($id_pelanggan_login !==$id_pelanggan_beli)
 				</div>
 				<div class="form-group">
 					<label>Jumlah</label>
-					<input type="number" class="form-control" name="jumlah" min="1" required>
+					<input type="number" class="form-control" name="jumlah" min="1" value="<?php echo($detpem["total"]);?>" readonly>
 				</div>
 				<div class="form-group">
 					<label>Foto Bukti</label>
