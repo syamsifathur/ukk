@@ -10,7 +10,6 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 	echo "<script>alert('Silahkan login terlebih dahulu')</script>";
 	exit();
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +27,7 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 	<?php include "menu.php" ?>
 
 	<!-- Konten -->
-	<section class="riwayat">
+	<section class="riwayat mt-4">
 		<div class="container">
 			<h3> Riwayat Belanja <?php echo $_SESSION["pelanggan"]["nama_lengkap"] ?> </h3>
 
@@ -63,7 +62,7 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 							<?php elseif ($pecah['status_pembelian']=="Sudah Dikirim"): ?>
 							<a href="penerimaan-produk.php?id=<?php echo $pecah['id_pembelian']; ?>" class="btn-primary btn">Konfirmasi Pesanan</a>
 							<?php else: ?>
-								<a href="lihat_pembayaran.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-warning">Lihat Pembayaran</a>
+								<a href="lihat_pembayaran.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-warning">Lihat Transaksi</a>
 							<?php endif ?>
 						</td>
 					</tr>
