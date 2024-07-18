@@ -87,4 +87,4 @@ $detail = $ambil->fetch_assoc();
     <script src="admin/assets/js/bootstrap.bundle.min.js"></script>
 
 </body>
-</html>
+</html> lorem
