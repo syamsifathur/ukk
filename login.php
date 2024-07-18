@@ -8,7 +8,7 @@ include 'koneksi.php';
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="img/fav-icon.png">
+	<link rel="icon" type="image/png" href="img/fav-icon1.png">
 	<title>Login Pelanggan</title>
 	<link rel="stylesheet" href="admin/assets/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="style.css" type="text/css">
@@ -63,7 +63,8 @@ if (isset($_POST["login"]))
 		$akun = $ambil->fetch_assoc();
 		//simpan di session pelanggan
 		$_SESSION["pelanggan"] = $akun;
-		echo "<script>alert('Anda Berhasil Login');</script>";
+		echo "<div class='alert alert-info'>Login Sukses</div>";
+        echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=home'>";
 
 		//jika sudah belanja langsung checkout
 		if (isset($_SESSION["keranjang"]) OR !empty($_SESSION["keranjang"])) 
@@ -89,11 +90,6 @@ if (isset($_POST["login"]))
     <?php include "footer.php" ?>
     <!-- Akhir Footer -->
 
-    <!-- Menu Copyright -->
-    <div class="copyright">
-        Copyright © 2022 Syamsi Fathur Rachmad
-    </div>
-    <!-- Akhir Menu Copyright -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="admin/assets/js/jquery-3.5.1.slim.min.js"></script>

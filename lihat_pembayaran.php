@@ -30,7 +30,7 @@ if ($_SESSION["pelanggan"]['id_pelanggan']!==$detbay["id_pelanggan"])
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="img/fav-icon.png">
+	<link rel="icon" type="image/png" href="img/fav-icon1.png">
 	<title>Lihat Pembayaran</title>
 	<link rel="stylesheet" href="admin/assets/css/bootstrap.css">
 	<link rel="stylesheet" href="style.css">
@@ -80,12 +80,6 @@ if ($_SESSION["pelanggan"]['id_pelanggan']!==$detbay["id_pelanggan"])
 	<!-- Bagian Footer -->
     <?php include "footer.php" ?>
     <!-- Akhir Footer -->
-
-    <!-- Menu Copyright -->
-    <div class="copyright">
-        Copyright © 2021 Syamsi Fathur Rachmad
-    </div>
-    <!-- Akhir Menu Copyright -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="admin/assets/js/jquery-3.5.1.slim.min.js"></script>

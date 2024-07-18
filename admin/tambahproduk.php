@@ -30,9 +30,9 @@ if (isset($_POST['save'])) {
 	$lokasi = $_FILES['foto']['tmp_name'];
 	move_uploaded_file($lokasi, "../img/".$nama);
 
-	$koneksi->query("INSERT INTO produk (nama_produk,stock,harga,foto_produk,des) VALUES('$_POST[nama]','$_POST[stock]','$_POST[harga]','$nama','$_POST[deskripsi]')");
+	$koneksi->query("INSERT INTO produk (nama_produk,stock,harga,foto_produk,deskripsi_produk) VALUES('$_POST[nama]','$_POST[stock]','$_POST[harga]','$nama','$_POST[deskripsi]')");
 
-	echo "<div class='alert alert-info'>Data tersimpan</div>";
+	echo "<script>alert('Data Berhasil Ditambahkan');</script>";
 	echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=produk'>";
 
 }

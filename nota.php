@@ -82,14 +82,19 @@ include 'koneksi.php';
 	</table>
 	<br>
 	<div class="row">
-		<div class="col-md-7">
+		<div class="col-md-12">
 			<div class="alert alert-info">
-				<p> Silahkan Melakukan Pembayaran Rp. <?php echo number_format($detail['total']) ?> ke salah satu:<br>
+				<?php if ($detail['status_pembelian']=="Pending"): ?>
+					<p> Silahkan Melakukan Pembayaran ke salah satu Rp. <?php echo number_format($detail['total']);  ?> :<br>
 					<strong>Bank BCA 4323189019 AN SYAMSI FATHUR RACHMAD</strong><br>
 					<strong>Dana 0812345123941 AN SYAMSI FATHUR RACHMAD</strong><br>
 					<strong>Ovo 0812345123941 AN SYAMSI FATHUR RACHMAD</strong><br>
 					Terimakasih Telah Membeli Produk Kami.
 				</p>
+				<a href="pembayaran.php?id=<?php echo $detail["id_pembelian"] ?>" class="btn btn-success">Konfirmasi Pembayaran</a>
+				<?php else: ?>
+					<a href="lihat_pembayaran.php?id=<?php echo $detail["id_pembelian"] ?>" class="btn btn-warning">Lihat Transaksi</a>
+				<?php endif ?>
 			</div>
 		</div>
 	</div>
@@ -101,10 +106,6 @@ include 'koneksi.php';
     <?php include "footer.php" ?>
     <!-- Akhir Footer -->
 
-    <!-- Menu Copyright -->
-    <div class="copyright">
-        Copyright © 2021 Syamsi Fathur Rachmad
-    </div>
     <!-- Akhir Menu Copyright -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -10,7 +10,7 @@ include 'koneksi.php';
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="../img/fav-icon.png">
+    <link rel="icon" type="image/png" href="../img/fav-icon1.png">
     <title>Login Administrator</title>
 	<!-- BOOTSTRAP STYLES-->
     <link rel="stylesheet" href="assets/css/style-login.css">

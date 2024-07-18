@@ -25,6 +25,10 @@ $pecah=$ambil->fetch_assoc();
 		<label>Ganti Foto</label>
 		<input type="file" name="foto" class="form-control">
 	</div>
+    <div class="form-group">
+		<label>Deskripsi Produk</label>
+		<textarea class="form-control" name="deskripsi" required><?php echo $pecah['deskripsi_produk'] ?></textarea>
+	</div>
 	<button class="btn btn-primary" name="updatee">Ubah</button>
 </form>
 
@@ -37,11 +41,11 @@ if (isset($_POST['updatee']))
 	if (!empty($lokasifoto)) 
 	{
 		move_uploaded_file($lokasifoto, "../foto_produk/$namafoto");
-		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]', stock='$_POST[stock]',harga='$_POST[harga]',foto_produk='$namafoto' WHERE id_produk='$_GET[id]'");
+		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]', stock='$_POST[stock]',harga='$_POST[harga]',foto_produk='$namafoto',deskripsi_produk='$_POST[deskripsi]' WHERE id_produk='$_GET[id]'");
 	}
 	else
 	{
-		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]', stock='$_POST[stock]',harga='$_POST[harga]',foto_produk='$namafoto' WHERE id_produk='$_GET[id]'");
+		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]', stock='$_POST[stock]',harga='$_POST[harga]',deskripsi_produk='$_POST[deskripsi]' WHERE id_produk='$_GET[id]'");
 	}
 	echo "<script>alert('data produk telah diubah');</script>";
 	echo "<script>location='index.php?halaman=produk'</script>";

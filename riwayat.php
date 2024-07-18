@@ -58,11 +58,11 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 							<a href="nota.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-info">Nota</a>
 
 							<?php if ($pecah['status_pembelian']=="Pending"): ?>
-							<a href="pembayaran.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-success">Input Pembayaran</a>
+							<a href="pembayaran.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-success">Konfirmasi Pembayaran</a>
 							<?php elseif ($pecah['status_pembelian']=="Sudah Dikirim"): ?>
 							<a href="penerimaan-produk.php?id=<?php echo $pecah['id_pembelian']; ?>" class="btn-primary btn">Konfirmasi Pesanan</a>
 							<?php else: ?>
-								<a href="lihat_pembayaran.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-warning">Lihat Transaksi</a>
+							<a href="lihat_pembayaran.php?id=<?php echo $pecah["id_pembelian"] ?>" class="btn btn-warning">Lihat Transaksi</a>
 							<?php endif ?>
 						</td>
 					</tr>
@@ -77,12 +77,6 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 	<!-- Bagian Footer -->
     <?php include "footer.php" ?>
     <!-- Akhir Footer -->
-
-    <!-- Menu Copyright -->
-    <div class="copyright">
-        Copyright © 2021 Syamsi Fathur Rachmad
-    </div>
-    <!-- Akhir Menu Copyright -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="admin/assets/js/jquery-3.5.1.slim.min.js"></script>

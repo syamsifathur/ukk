@@ -103,11 +103,6 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
     <?php include "footer.php" ?>
     <!-- Akhir Footer -->
 
-    <!-- Menu Copyright -->
-    <div class="copyright">
-        Copyright © 2021 Syamsi Fathur Rachmad
-    </div>
-    <!-- Akhir Menu Copyright -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="admin/assets/js/jquery-3.5.1.slim.min.js"></script>
